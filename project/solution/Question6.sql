@@ -1,4 +1,4 @@
-/*How many confirmed completed reservations did the member (ID) with the most reserved classes in February have?*/
+;/*How many confirmed completed reservations did the member (ID) with the most reserved classes in February have?*/
 
 SELECT 
     Member_id, COUNT(signed_in_at IS NOT NULL)
@@ -18,6 +18,9 @@ WHERE
 GROUP BY Member_id
 ORDER BY COUNT(checked_in_at IS NOT NULL) desc;
 
-/*These functions work. They return two tables instead of one though, which is less convenient.
-From looking at both, it is possible to determine that member_id 4 has the highest number of completed reservations in February.
+/*These functions work. They return two tables instead of one, which is less convenient.
+I compared the infomration provided from both tables. 
+You can also use a query to run against the clubready and mindbody tables together, with a JOIN or UNION, similar to what you see in Question 7.
+From looking at both tables, it is possible to determine that member_id 4 has the highest number of completed reservations in February.
+
 Member_id 4 completed 6 reservations*/

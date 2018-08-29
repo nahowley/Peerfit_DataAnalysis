@@ -20,7 +20,7 @@ HAVING COUNT(checked_in_at IS NOT NULL) >= 1
     AND COUNT(canceled_at IS NOT NULL) <= 1;
 
 /*Neither of the above functions return exactly what I want because they don't return a single count.
-Instead they return multiple columns all counting one. I had trouble finding a solution to this even after looking through stackoverflow. 
+Instead they return multiple columns all counting one member_id. I had trouble finding a solution to this even after looking through stackoverflow. 
 I tried out the below code to collect specific member id numbers to check how many members met the conditions of the question though. 
 I didn't want to spend too much time on this but I surely would have figured this out, for some reason I just had some trouble wrapping my head around the final count*/
 
@@ -42,11 +42,11 @@ GROUP BY member_id
 HAVING COUNT(checked_in_at) >= 1
     AND COUNT(canceled_at) <= 1;
     
-/*I originally ran the code for each table separately which is not ideal for gaining a full understanding of the data for either returned table.
+/*I originally ran the code for each table separately which is not ideal for gaining a full understanding of the data.
 To address this, I compared across both tables. 
-You can also use a query to run against the queries together, with a JOIN or UNION, similar to what you see in Question 7 
-I also ended up having to count each returned member id because I couldn't get the code quite right.
-I also know that my count may be off because I ran the code for each table seperately and I know that it is possible for members to have recorded classes in both tables.
+You can also use a query to run against the clubready and mindbody tables together, with a JOIN or UNION, similar to what you see in Question 7.
+I ended up having to count each returned member_id because I didn't get the code quite right.
+I also know that my count may be off because I ran the code for each table separately and I know that it is possible for members to have recorded class reservations and cancelations in both tables.
 The members who have recorded reservations in both tables are not taken into account in my final number.
 
 18 members completed at least one reservation and had no more than one canceled reservation at the studios tracked by mindbody or clubready in January.*/
