@@ -42,11 +42,11 @@ GROUP BY member_id
 HAVING COUNT(checked_in_at) >= 1
     AND COUNT(canceled_at) <= 1;
     
-/*I originally ran the code for each table separately which is not ideal for gaining a full understanding of the data.
-To address this, I compared across both tables. 
+/*These functions work. They return two tables instead of one, which is less convenient.
+I compared the infomration provided from both tables. 
 You can also use a query to run against the clubready and mindbody tables together, with a JOIN or UNION, similar to what you see in Question 7.
-I ended up having to count each returned member_id because I didn't get the code quite right.
-I also know that my count may be off because I ran the code for each table separately and I know that it is possible for members to have recorded class reservations and cancelations in both tables.
+I ended up having to count each returned member_id because the statement isn't quite right.
+The count may be off because I ran the code for each table separately and it is possible for members to have recorded class reservations and cancelations in both tables.
 The members who have recorded reservations in both tables are not taken into account in my final number.
 
 18 members completed at least one reservation and had no more than one canceled reservation at the studios tracked by mindbody or clubready in January.*/

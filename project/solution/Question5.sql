@@ -64,7 +64,7 @@ CASE
 END
 from mindbody_reservations;
 /*This was something I put together in an attempt to get a clean table. Didn't figure out how to get it quite right.
-This can't run. I thought it might give an idea of what I was going for initially though.*/
+This can't run but I thought it might provide an idea of what I was going for.*/
 
 
 /*More work*/

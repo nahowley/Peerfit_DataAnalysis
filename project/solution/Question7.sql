@@ -37,3 +37,5 @@ FROM mindbody_reservations
 
 /*Order initially by reservation_day, assuming that is probably the most favorable filter to use when analyzing data over time. Further ordered by signed in time to show order of people signing in throughout a given day.*/
 ORDER BY Reservation_day,signed_in;
+
+/*This table does not combine canceled and canceled_at columns accross the clubready_reservations and the mindbody_reservations*/
